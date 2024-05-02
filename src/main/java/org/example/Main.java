@@ -9,23 +9,6 @@ public class Main {
  *  PrintDatabaseVisitor Class: This class implements the DatabaseVisitor interface and defines the visit methods. When a visit method is called, it prints a message indicating which class it’s visiting.
  *  Main Class: This class creates an array of Database objects (which are JDO and Datastore objects), creates a PrintDatabaseVisitor, and iterates over the Database array, accepting the visitor for each database.
      */
-   public static void main(String[] args) {
-       String DatabaseType = "JDO";
-       //application type = "Datastore"/"JDO"
-       DatabaseVisitor visitor = new PrintDatabaseVisitor();
-
-       switch (DatabaseType) {
-           case "JDO":
-               Database jdo = new JDO();
-               jdo.accept(visitor);
-               break;
-           case "Datastore":
-               Database datastore = new Datastore();
-               datastore.accept(visitor);
-               break;
-           default:
-               System.out.println("Invalid DatabaseType");
-               break;
-       }
-   }
+//   public static void main(String[] args) {
+//    System.out.println("Hello from Main Class");
 }
